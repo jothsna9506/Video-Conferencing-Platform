@@ -48,29 +48,18 @@ export const AuthProvider = ({children})=>{
     }
 
     const handleLogin = async(username,password)=>{
-        try{
-            let request = await client.post("/login",{
-                username:username,
-                password:password
-            });
-
-
+    try{
+        const request = await client.post("/login", { username, password });
         if(request.status === 200){
-
-        const token = request.data.token || request.data.jwt || request.data.accessToken;
-
-        if (!token) {
-            console.error("No token found in response:", request.data);
-            return;
+            const token = request.data.token;
+            if(!token) throw new Error("No token returned");
+            localStorage.setItem("token", token);
+            router("/home");
         }
-        localStorage.setItem("token",token);
-        router("/home");
+    } catch(err) {
+        throw new Error(err.response?.data?.message || "Login failed");
     }
-        }catch(err){
-            console.error("Login failed:", err.response?.data || err.message);
-        }
-
-    }
+}
 
     const getHistoryOfUser = async()=>{
         try{

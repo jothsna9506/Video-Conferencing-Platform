@@ -1,4 +1,4 @@
-.landingPageContainer{
+/*.landingPageContainer{
   width:100vw;
   height:100vh;
   background:url("/public/background.png");
@@ -24,7 +24,7 @@
   gap: 1.6rem;
   cursor:pointer;
 }
-
+*/
 .landingMainContainer{
   display:flex;
   justify-content: space-between;

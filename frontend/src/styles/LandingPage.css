@@ -1,0 +1,164 @@
+/* ------------------------------
+   Landing Page — Global Styles
+------------------------------ */
+
+/* Background & Global */
+.landingPageContainer {
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0B132B, #1C2541);
+  color: #F8FAFC;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* NAVBAR */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 60px;
+  background: rgba(11, 19, 43, 0.6);
+  backdrop-filter: blur(10px);
+}
+
+.navHeader h2 {
+  color: #5BC0BE;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+/* Nav Items */
+.navlist {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  font-weight: 500;
+  color: #A7B3C2;
+}
+
+.navlist p {
+  cursor: pointer;
+}
+
+.navlist p:hover {
+  color: #6FFFE9;
+}
+
+/* Login Button */
+.navlist div {
+  background: #5BC0BE;
+  padding: 8px 18px;
+  border-radius: 6px;
+  color: #0B132B;
+  cursor: pointer;
+}
+
+.navlist div:hover {
+  background: #6FFFE9;
+}
+
+/* HERO SECTION */
+.landingMainContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 60px;
+  gap: 40px;
+}
+
+/* Heading */
+.landingMainContainer h1 {
+  font-size: 3rem;
+  line-height: 1.2;
+}
+
+.landingMainContainer h1 span {
+  color: #5BC0BE;
+}
+
+/* Subtitle */
+.landingMainContainer p {
+  color: #A7B3C2;
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+/* ------------------------------
+   Get Started Button — Fixed
+------------------------------ */
+.landingMainContainer > div:first-child div[role="button"] a {
+    background: #5BC0BE !important;
+    color: #0B132B;
+    padding: 18px 36px;        /* bigger button */
+    font-size: 1.2rem;         /* larger text */
+    border-radius: 10px;       /* rounded edges */
+    font-weight: 700;
+    text-decoration: none;
+    display: inline-block;
+    transition: transform 0.25s ease;
+
+    /* remove any outline/border from old CSS */
+    outline: none;
+    border: none;
+}
+/* Remove old orange background from parent div */
+.landingMainContainer > div:first-child div[role="button"] {
+    background: none !important;   /* remove orange */
+    width: fit-content;            /* keep sizing */
+    padding: 0;                    /* controlled by <a> now */
+    border-radius: 10px;           /* match <a> */
+    margin-top: 1.9rem;            /* same spacing as before */
+}
+
+
+.landingMainContainer > div:first-child div[role="button"] a:hover {
+    transform: translateY(-4px);  /* just float, no glow/shadow */
+}
+
+.landingMainContainer > div:first-child div[role="button"] a:focus {
+    outline: none;
+    border: none;
+}
+
+/* Image Styling */
+.landingMainContainer img {
+  width: 420px;
+  filter: drop-shadow(0 20px 40px rgba(0,0,0,0.4));
+  animation: float 4s ease-in-out infinite;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0px); }
+}
+
+/* Smooth UI transitions */
+* {
+  transition: all 0.2s ease-in-out;
+}
+
+/* Text selection color */
+::selection {
+  background: #5BC0BE;
+  color: #0B132B;
+}
+
+/* ------------------------------
+   Responsive
+------------------------------ */
+@media (max-width: 900px) {
+  .landingMainContainer {
+    flex-direction: column;
+    text-align: center;
+    gap: 40px;
+  }
+
+  .landingMainContainer img {
+    width: 300px;
+  }
+
+  nav {
+    padding: 20px 30px;
+  }
+}

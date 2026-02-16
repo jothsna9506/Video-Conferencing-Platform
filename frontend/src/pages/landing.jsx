@@ -1,6 +1,7 @@
 import React from 'react'
-import "../App.css"
+import "../styles/LandingPage.css"
 import { Link, useNavigate } from 'react-router-dom'
+
 export default function LandingPage() {
     const router = useNavigate();
     
@@ -8,35 +9,34 @@ export default function LandingPage() {
     <div className='landingPageContainer'>
         <nav>
             <div className='navHeader'>
-                <h2>Apna Video Call</h2>
+                <h2>Encuentro</h2>
             </div>
             <div className='navlist'>
-                <p onClick={()=>{
-                    router("/aljk23")
-                }}>Join as Guest</p>
+                <p onClick={()=>{ router("/aljk23") }}>Join as Guest</p>
                 <p>Register</p>
-                <div onClick={()=>{
-                    router("/auth")
-                }} role='button'>
+                <div onClick={()=>{ router("/auth") }} role='button'>
                     <p>Login</p>
-
                 </div>
             </div>
         </nav>
 
         <div className="landingMainContainer">
             <div>
-            <h1><span style={{ color: "#FF9839" }}>Connect</span> with your loved Ones</h1>
+                <h1>
+                  <span>Where Conversations</span> Come to Life
+                </h1>
 
-            <p>Cover a distance by Apna Video Call</p>
-            <div role='button'>
-                <Link to={"/auth"}>Get Started</Link>
+                <p>Meet. Chat. Collaborate through Encuentro</p>
+
+                <div role='button'>
+                    <Link to={"/auth"}>Get Started</Link>
+                </div>
             </div>
-            </div>
+
             <div>
-            <img src="/mobile.png" alt=""/>
+                <img src="/mobile.png" alt="Encuentro app preview"/>
+            </div>
         </div>
-</div>
-</div>
-)
+    </div>
+  )
 }
