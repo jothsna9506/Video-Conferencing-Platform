@@ -1,4 +1,6 @@
 import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
 import { createServer } from "node:http";
 import { Server } from "socket.io";
 import mongoose from "mongoose";
@@ -20,9 +22,8 @@ app.use("/api/v1/users", userRoutes);
 
 const start = async () => {
   try {
-    const mongoURI =
-      "mongodb+srv://jothsna:WinnerJothsna9506@clusterme.lxynesr.mongodb.net/video_conference?retryWrites=true&w=majority";
-
+  const mongoURI = process.env.MONGO_URI;
+      
     const connectionDb = await mongoose.connect(mongoURI, {
       useNewUrlParser: true,
       useUnifiedTopology: true,
