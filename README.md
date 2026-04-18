@@ -1,10 +1,8 @@
 
- # Video Conferencing Platform – MERN Stack Video Conferencing App
+# Video Conferencing Platform – MERN Stack Video Conferencing App
 
 ## Overview
 Video Conferencing Platform is a full-stack web application built using the **MERN Stack (MongoDB, Express.js, React.js, Node.js)** that allows users to create and join video meetings in real time. The application replicates essential video conferencing features such as secure authentication, instant meeting creation, video/audio communication, and responsive meeting rooms. It uses **WebRTC** for peer-to-peer media streaming and **Socket.IO** for real-time signaling, ensuring a seamless communication experience.
-
-
 
 ## Features
 
@@ -32,7 +30,6 @@ Video Conferencing Platform is a full-stack web application built using the **ME
 - Copy meeting link functionality for easy sharing
 - Meeting history management
 
-
 ## Tech Stack
 
 ### Frontend
@@ -50,8 +47,6 @@ Video Conferencing Platform is a full-stack web application built using the **ME
 - **Socket.IO**
 - **JWT Authentication**
 
-
-
 ## Architecture Overview
 - **Frontend Layer:** Built with **React.js** to manage the user interface, meeting dashboard, and video room interactions.
 - **Backend Layer:** Built with **Node.js** and **Express.js** to handle APIs, user authentication, and meeting management.
@@ -59,12 +54,9 @@ Video Conferencing Platform is a full-stack web application built using the **ME
 - **Real-Time Layer:** **Socket.IO** handles signaling and participant updates.
 - **Media Layer:** **WebRTC** enables low-latency peer-to-peer audio/video communication.
 
-
-
 ## Key Highlights
 - Developed a real-time video conferencing application with secure user authentication.
 - Integrated **WebRTC** for live audio/video streaming.
 - Implemented **Socket.IO** for seamless signaling and room communication.
 - Built a responsive meeting interface with screen sharing and media controls.
 - Designed scalable backend APIs for meeting and user management.
-
