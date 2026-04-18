@@ -5,5 +5,40 @@ MongoDB for database.
 node.js,express.js for backend.
 involves concept such as websockets.
 
-<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/2f0426d2-e708-492e-a61f-6491ffd840aa" />
+features
+Authentication
+User Signup / Login with JWT Authentication
+Protected Routes
+Secure Password Hashing using bcrypt
+Session Management
+Meeting Functionality
+Create New Meetings with unique meeting IDs
+Join Existing Meetings via meeting ID
+Real-time Video & Audio Communication
+Toggle Camera / Microphone
+Screen Sharing
+Meeting Room UI similar to Zoom
+Real-time Communication
+WebRTC for peer-to-peer media streaming
+Socket.IO for signaling and real-time events
+Live participant join/leave notifications
+User Experience
+Responsive UI for desktop and mobile
+Modern dashboard interface
+Copy meeting link functionality
+Meeting history (optional)
+Tech Stack
+Frontend
+React.js
+Redux / Context API
+Tailwind CSS / CSS Modules
+Socket.IO Client
+WebRTC
+Backend
+Node.js
+Express.js
+MongoDB
+Mongoose
+Socket.IO
+JWT Authentication
 
